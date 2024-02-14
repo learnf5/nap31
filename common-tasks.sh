@@ -1,6 +1,6 @@
 # get lab-info.md for student guide bravais id
 curl --silent https://raw.githubusercontent.com/learnf5/nap-dev/main/lab-info.md --output /tmp/lab-info.md
-brav_id=$(awk -F '|' "/$lab_id/"' {print $2}' /tmp/lab-info.md)
+brav_id=$(awk -F '|' "/$LAB_ID/"' {print $2}' /tmp/lab-info.md)
 
 # install student guide
 cat <<'EOF' >/home/student/Desktop/Lab_Guide.desktop
@@ -17,13 +17,13 @@ gio set /home/student/Desktop/Lab_Guide.desktop metadata::trusted true
 chmod +x /home/student/Desktop/Lab_Guide.desktop
 
 # install nginx license
-curl --silent --remote-name-all --output-dir /tmp --header "Authorization: token $lic_token" https://raw.githubusercontent.com/learnf5/eval-reg-keys/main/nginx/nginx-repo.{crt,key}
+curl --silent --remote-name-all --output-dir /tmp --header "Authorization: token $LIC_TOKEN" https://raw.githubusercontent.com/learnf5/eval-reg-keys/main/nginx/nginx-repo.{crt,key}
 until sudo scp /tmp/nginx-repo.* nginx:/etc/ssl/nginx/ || (( count++ > 5 )); do sleep 5; done
 
 # run this lab's specific tasks saved on GitHub
-curl --silent --output /tmp/lab-specific-tasks.sh https://raw.githubusercontent.com/learnf5/nap-dev/main/$lab_id.sh
-bash -x /tmp/lab-specific-tasks.sh
+curl --silent --output /tmp/$LAB_ID.sh https://raw.githubusercontent.com/learnf5/nap-dev/main/$LAB_ID.sh
+bash -x /tmp/$LAB_ID.sh
 
 # restart NGINX
-sudo ssh 10.10.1.61 systemctl stop nginx
-sudo ssh 10.10.1.61 systemctl start nginx
+sudo ssh nginx systemctl stop nginx
+sudo ssh nginx systemctl start nginx
