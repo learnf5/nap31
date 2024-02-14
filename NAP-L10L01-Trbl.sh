@@ -19,7 +19,7 @@ curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.
 curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/learnf5/nap/main/lab09/{{,new-}signature-report.json,app-protect-security-updates.key,{nginx,nap}.WAF}
 sudo scp /tmp/my-filetypes.txt                              nginx:/etc/app_protect/conf/
 sudo scp /tmp/local-policy.json                             nginx:/etc/app_protect/conf/nap.d/
-sudo scp /tmp/{,new-}signature-report.json                   nginx:/tmp/
+sudo scp /tmp/{,new-}signature-report.json                  nginx:/tmp/
 sudo scp /tmp/app-protect-security-updates.key              nginx:/home/student/
 sudo scp /tmp/nginx.WAF                                     nginx:/etc/nginx/
 sudo scp /tmp/nap.WAF                                       nginx:/etc/nginx/conf.d/
