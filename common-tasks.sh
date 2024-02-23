@@ -17,7 +17,10 @@ gio set /home/student/Desktop/Lab_Guide.desktop metadata::trusted true
 chmod +x /home/student/Desktop/Lab_Guide.desktop
 
 # install nginx license
+set +x
 curl --silent --remote-name-all --output-dir /tmp --header "Authorization: token $LIC_TOKEN" https://raw.githubusercontent.com/learnf5/eval-reg-keys/main/nginx/nginx-repo.{crt,key}
+echo curl --silent --remote-name-all --output-dir /tmp --header "Authorization: token xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" https://raw.githubusercontent.com/learnf5/eval-reg-keys/main/nginx/nginx-repo.{crt,key}
+set -x
 until sudo scp /tmp/nginx-repo.* nginx:/etc/ssl/nginx/ || (( count++ > 5 )); do sleep 5; done
 
 # run this lab's specific tasks saved on GitHub
