@@ -1,3 +1,7 @@
+# enable debugging
+set -x
+PS4='+$(date +"%T.%3N"): '
+
 # update lab environment
 cd /tmp
 git clone https://github.com/learnf5/nap.git nap_files
