@@ -1,0 +1,59 @@
+load_module modules/ngx_http_app_protect_dos_module.so;
+
+user  nginx;
+worker_processes  auto;
+
+error_log  /var/log/nginx/error.log notice;
+pid        /var/run/nginx.pid;
+
+
+events {
+    worker_connections  1024;
+}
+
+
+http {
+    app_protect_dos_enable on;
+    app_protect_dos_name "vs-student";
+    app_protect_dos_policy_file "/etc/app_protect_dos/BADOSDefaultPolicy.json";
+    app_protect_dos_monitor uri=http://myserver:80/ timeout=2;
+    app_protect_dos_security_log_enable on;
+    app_protect_dos_security_log "/etc/app_protect_dos/log-default.json" /var/log/app_protect/demo.log;
+
+    include       /etc/nginx/mime.types;
+    default_type  application/octet-stream;
+
+    log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
+                      '$status $body_bytes_sent "$http_referer" '
+                      '"$http_user_agent" "$http_x_forwarded_for"';
+
+    access_log  /var/log/nginx/access.log  main;
+
+    sendfile        on;
+    #tcp_nopush     on;
+
+    keepalive_timeout  65;
+
+    #gzip  on;
+
+    include /etc/nginx/conf.d/*.conf;
+}
+
+
+# TCP/UDP proxy and load balancing block
+#
+#stream {
+    # Example configuration for TCP load balancing
+
+    #upstream stream_backend {
+    #    zone tcp_servers 64k;
+    #    server backend1.example.com:12345;
+    #    server backend2.example.com:12345;
+    #}
+
+    #server {
+    #    listen 12345;
+    #    status_zone tcp_server;
+    #    proxy_pass stream_backend;
+    #}
+#}
