@@ -1,0 +1,12 @@
+/tmp/package_versions.txt
+/tmp/system_version.txt
+/tmp/napd_shmem.txt
+/tmp/linux_shmem.txt
+/var/log/app_protect/*
+/var/log/adm/*
+/var/log/nginx/*
+/etc/nginx/nginx.conf
+/etc/nginx/conf.d/*
+/etc/app_protect/conf/nap.d/*
+/etc/app_protect_dos/*
+/var/run/adm/*
