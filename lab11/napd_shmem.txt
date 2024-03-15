@@ -1,0 +1,16 @@
+Global stats:
+current_time:				 1701727474
+max_worker_processes:			 4
+tmm_count:				 0
+daemons_count:				 4
+ngx_reload_iter:			 0
+vs_idx_cleanup:				 0
+admd_keepalive:				 1701727473
+admd_log_level:				 2
+ebpf_status:				 off
+ebpf_enabled:				 false
+curl_version:				 7.81.0
+arb_fqdn:				 svc-appprotect-dos-arb
+global_conn_per_worker:			 
+global_conn_overall:			 0
+mitigation_rate_period:			 0
