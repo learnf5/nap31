@@ -1,0 +1,12 @@
+{
+    "filter": {
+        "request_type": "illegal"
+    },
+ 
+    "content": {
+        "format": "user-defined",
+    "format_string": "Request ID: %support_id%, Reason: %outcome_reason%, Outcome: %outcome%, Attack Type: %attack_type%, Request Status %request_status%, %method% %uri%, Received on: %date_time% from IP: %ip_client% had the following violations: %violations%, Policy is: %policy_name%",
+        "max_request_size": "any",
+        "max_message_size": "32k"
+    }
+}
