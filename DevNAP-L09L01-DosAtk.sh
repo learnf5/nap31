@@ -26,3 +26,10 @@ sudo scp /tmp/{,new-}signature-report.json                 nginx:/tmp/
 sudo scp /tmp/app-protect-security-updates.key             nginx:/home/student/
 sudo scp /tmp/nginx.WAF                                    nginx:/etc/nginx/
 sudo scp /tmp/nap.WAF                                      nginx:/etc/nginx/conf.d/
+sudo ssh nginx mkdir --parents /home/student/Desktop/Lab_Files/
+curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/learnf5/devnap/main/GoodTraffic.sh
+curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/learnf5/devnap/main/BadTraffic.sh
+sudo scp /tmp/GoodTraffic.sh                               nginx:/home/student/Desktop/Lab_Files/GoodTraffic.sh
+sudo scp /tmp/BadTraffic.sh                               nginx:/home/student/Desktop/Lab_Files/BadTraffic.sh
+sudo ssh chown +x /home/student/Desktop/Lab_Files/GoodTraffic.sh
+sudo ssh chown +x /home/student/Desktop/Lab_Files/BadTraffic.sh
