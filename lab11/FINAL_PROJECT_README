@@ -1,1 +1,6 @@
 The final project requires configuration from previous labs.
+
+policy_customResponse.json file goes in /home/student/Desktop/Lab_Files directory
+policy_curl.json goes in /home/student/Desktop/Lab_Files directory
+
+The nap.conf file should have both upstreams and server blocks for crAPI.
