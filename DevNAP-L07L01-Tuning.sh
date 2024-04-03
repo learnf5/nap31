@@ -18,3 +18,6 @@ curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.
 sudo scp /tmp/my-default-policy.json nginx:/tmp/my-default-policy.json
 curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/learnf5/devnap/main/lab07/policy_{transparent,viol_{http,evasion,filetype}}.json
 sudo scp /tmp/policy_{transparent,viol_{http,evasion,filetype}}.json nginx:/etc/app_protect/conf/nap.d/
+# FOR TESTING PURPOSES ONLY - remove next 2 lines once get FINAL PROJECT lab finalized
+sudo mkdir --parents /home/student/Desktop/Lab_Files/
+curl --silent --remote-name-all --output-dir /home/student/Desktop/Lab_Files https://raw.githubusercontent.com/learnf5/devnap/main/lab13/nap.conf
