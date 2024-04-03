@@ -7,6 +7,7 @@ cd /tmp
 git clone https://github.com/learnf5/nap.git nap_files
 sudo ssh nginx rm /etc/nginx/conf.d/default.conf
 sudo ssh nginx mkdir --parents /etc/app_protect/conf/nap.d
+sudo ssh nginx mkdir --parents /home/student/Desktop/Lab_Files
 
 sudo scp /tmp/nap_files/lab02/nginx.orig                                    nginx:/etc/nginx/
 sudo scp /tmp/nap_files/lab02/nap.orig                                      nginx:/etc/nginx/conf.d/
