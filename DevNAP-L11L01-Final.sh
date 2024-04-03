@@ -40,3 +40,5 @@ sudo scp /tmp/nap_files/lab11/tmp/napd_shmem.txt                            ngin
 sudo scp /tmp/nap_files/lab11/tmp/linux_shmem.txt                           nginx:/tmp/linux_shmem.txt
 sudo scp /tmp/nap_files/lab11/tmp/logs.txt                                  nginx:/tmp/logs.txt
 sudo scp /tmp/nap_files/lab11/tmp/logs.tgz                                  nginx:/tmp/logs.tgz
+# WHEN get verified copy of file uncomment next line
+# sudo scp /tmp/nap_files/lab11/customStrict.json                           nginx:/home/student/Desktop/Lab_Files/customStrict.json
