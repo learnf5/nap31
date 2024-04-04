@@ -32,5 +32,5 @@ curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.
 sudo mkdir --parents /home/student/Desktop/Lab_Files/
 sudo mv /tmp/GoodTraffic.sh                               /home/student/Desktop/Lab_Files/GoodTraffic.sh
 sudo mv /tmp/BadTraffic.sh                                /home/student/Desktop/Lab_Files/BadTraffic.sh
-sudo ssh chown +x /home/student/Desktop/Lab_Files/GoodTraffic.sh
-sudo ssh chown +x /home/student/Desktop/Lab_Files/BadTraffic.sh
+sudo chown +x /home/student/Desktop/Lab_Files/GoodTraffic.sh
+sudo chown +x /home/student/Desktop/Lab_Files/BadTraffic.sh
