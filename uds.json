@@ -1,0 +1,25 @@
+{
+    "softwareVersion": "15.1.0",
+    "tag": "Fruits",
+    "signatures": [
+        {
+            "name": "Apple_medium_acc",
+            "rule": "content:\"shakeel\"; nocase;",
+            "signatureType": "request",
+            "attackType": {
+                "name": "Buffer Overflow"
+            },
+            "systems": [
+                {
+                    "name": "Microsoft Windows"
+                },
+                {
+                    "name": "Unix/Linux"
+                }
+            ],
+            "risk": "medium",
+            "accuracy": "medium",
+            "description": "Medium accuracy user defined signature with tag (Fruits)"
+        }
+    ]
+}
