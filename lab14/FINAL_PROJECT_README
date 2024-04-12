@@ -1,6 +1,0 @@
-This is the FINAL PROJECT lab
-
-Includes a custom response, not writing curl to security log by considering this un-trusted bot instead as a "legal" request, 
-and adding Data Guard with a custom pattern for 9 digits like a Canadian ID#, and then taking all these customizations and 
-adding them to the strict policy.
-
