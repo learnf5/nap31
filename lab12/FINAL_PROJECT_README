@@ -1,6 +1,9 @@
 The final project requires configuration from previous labs.
 
+Create custom response, configure curl to be allowed as a legal request and not be written to the security log as an un-trusted bot, 
+add data guard with a custom pattern with 9 digits for example like the Canadian ID#, 
+and add all customizations to a custom policy that starts with the NginxStrictPolicy.json file.
+
 policy_customResponse.json file goes in /home/student/Desktop/Lab_Files directory
 policy_curl.json goes in /home/student/Desktop/Lab_Files directory
-
-The nap.conf file should have both upstreams and server blocks for crAPI.
+CustomStrict.json goes in /home/student/Desktop/Lab_Files directory
