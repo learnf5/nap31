@@ -1,25 +1,23 @@
 {
     "softwareVersion": "15.1.0",
-    "tag": "Fruits",
+    "tag": "student_sig",
     "signatures": [
         {
-            "name": "Apple_medium_acc",
-            "rule": "content:\"shakeel\"; nocase;",
+            "name": "hacker",
+            "description": "Checks for the string hacker",
+            "rule": "content:\"hacker\"; nocase;",
             "signatureType": "request",
             "attackType": {
-                "name": "Buffer Overflow"
+                "name": "Other Application Attacks"
             },
             "systems": [
-                {
-                    "name": "Microsoft Windows"
-                },
                 {
                     "name": "Unix/Linux"
                 }
             ],
             "risk": "medium",
             "accuracy": "medium",
-            "description": "Medium accuracy user defined signature with tag (Fruits)"
+            "description": "Medium accuracy user defined signature with tag (student_sig)"
         }
     ]
 }
