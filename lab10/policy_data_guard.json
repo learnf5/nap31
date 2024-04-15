@@ -1,0 +1,31 @@
+{
+  "policy": {
+    "name": { "name": "POLICY_TEMPLATE_NGINX_BASE" },
+    "applicationLanguage": utf-8",
+    "enforcementMode": "blocking",
+    "blocking-settings": {
+      "violations": [
+        {
+          "name": "VIOL_DATA_GUARD",
+          "alarm": true,
+          "block": false
+        }
+      ]
+    },
+      "data-guard": {
+        "enabled": true,
+        "maskData": true,
+        "creditCardNumbers": true,
+        "usSocialSecurityNumbers": true,
+        "enforcementMode": "ignore-urls-in-list",
+        "enforcementUrls": [],
+        "customPatterns": true,
+        "firstCustomCharactersToExpose": 2,
+        "lastCustomCharactersToExpose": 2,
+        "customPatternsList": [
+          "[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]",
+          "[0-9][0-9][0-9] [0-9][0-9][0-9] [0-9][0-9][0-9]"]
+        ]
+      }
+  }
+}
