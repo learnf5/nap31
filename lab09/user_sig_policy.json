@@ -1,0 +1,34 @@
+{
+    "policy": {
+        "name": "custom_signature_policy",
+        "template": {
+            "name": "POLICY_TEMPLATE_NGINX_BASE"
+        },
+        "applicationLanguage": "utf-8",
+        "enforcementMode": "blocking",
+        "signature-requirements": [
+            {
+                "tag": "student_sig",
+            }
+        ],
+        "signatures": [
+            {
+                "name": "hacker_medium_acc",
+                "tag": "student_sig"
+            }
+        ],
+        "signature-sets": [
+            {
+                "name": "student_signature_set",
+                "block": true,
+                "alarm": true,
+                "signatureSet": {
+                    "filter": {
+                        "tagValue": "student_sig",
+                        "tagFilter": "eq"
+                    }
+                }
+            }
+        ]
+    }
+}
