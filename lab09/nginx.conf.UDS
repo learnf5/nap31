@@ -20,7 +20,7 @@ http {
 
  #   app_protect_policy_file "/etc/app_protect/conf/nap.d/policy_curl.json";
     
-    app_protect_policy_file "/etc/app_protect/conf/nap.d/user_defined_signature_policy.json";
+    app_protect_policy_file "/etc/app_protect/conf/nap.d/user_sig_policy.json";
     app_protect_user_defined_signatures "/etc/app_protect/conf/nap.d/uds.json";
 
 #    app_protect_policy_file "/etc/app_protect/conf/NginxStrictPolicy.json";
