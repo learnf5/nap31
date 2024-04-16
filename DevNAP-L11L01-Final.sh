@@ -22,13 +22,16 @@ sudo scp /tmp/nap_files/lab09/my-filetypes.txt                              ngin
 sudo scp /tmp/nap_files/lab09/local-policy.json                             nginx:/etc/app_protect/conf/nap.d/
 sudo scp /tmp/nap_files/lab09/{,new-}signature-report.json                  nginx:/tmp/
 sudo scp /tmp/nap_files/lab09/app-protect-security-updates.key              nginx:/home/student/
-sudo scp /tmp/nap_files/lab09/nginx.WAF                                     nginx:/etc/nginx/
-sudo scp /tmp/nap_files/lab09/nap.WAF                                       nginx:/etc/nginx/conf.d/
+sudo scp /tmp/nap_files/lab09/uds.json                                      nginx:/etc/nginx/conf.d/nap.d/
+sudo scp /tmp/nap_files/lab09/user_sig_policy.json                          nginx:/etc/nginx/conf.d/nap.d/
 
 sudo scp /tmp/nap_files/lab10/nginx.DoS                                     nginx:/etc/nginx/
 sudo scp /tmp/nap_files/lab10/nap.DoS                                       nginx:/etc/nginx/conf.d/
 sudo scp /tmp/nap_files/lab10/nginx.conf                                    nginx:/etc/nginx/
 sudo scp /tmp/nap_files/lab10/nap.conf                                      nginx:/etc/nginx/conf.d/
+sudo scp /tmp/nap_files/lab10/policy_data_guard.json                        nginx:/etc/app_protect/conf/nap.d/
+sudo scp /tmp/nap_files/lab10/nginx.WAF                                     nginx:/etc/nginx/nginx.conf
+sudo scp /tmp/nap_files/lab10/nap.WAF                                       nginx:/etc/nginx/conf.d/nap.conf
 
 sudo scp /tmp/nap_files/lab11/nginx.conf                                    nginx:/etc/nginx/
 sudo scp /tmp/nap_files/lab11/current_app_protect.txt                       nginx:/tmp/current_app_protect.txt
@@ -40,6 +43,6 @@ sudo scp /tmp/nap_files/lab11/tmp/system_version.txt                        ngin
 sudo scp /tmp/nap_files/lab11/tmp/napd_shmem.txt                            nginx:/tmp/napd_shmem.txt
 sudo scp /tmp/nap_files/lab11/tmp/linux_shmem.txt                           nginx:/tmp/linux_shmem.txt
 sudo scp /tmp/nap_files/lab11/tmp/logs.txt                                  nginx:/tmp/logs.txt
-sudo scp /tmp/nap_files/lab11/tmp/logs.tgz                                  nginx:/tmp/logs.tgz
+
 # ADDED for new v4.8 course labs
 sudo scp /tmp/nap_files/lab11/customStrict.json                           nginx:/home/student/Desktop/Lab_Files/customStrict.json
