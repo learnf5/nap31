@@ -21,8 +21,7 @@ curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.
 sudo scp /tmp/policy_viol_filetype.json                     nginx:/etc/app_protect/conf/nap.d
 sudo scp /tmp/my-filetypes.txt                              nginx:/etc/app_protect/conf/
 sudo scp /tmp/local-policy.json                             nginx:/etc/app_protect/conf/nap.d/
-curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/learnf5/devnap/main/lab09/{nginx.conf.UDS,uds.json,user_defined_signature_policy.json}
+curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/learnf5/devnap/main/lab09/{uds.json,user_sig_policy.json}
 sudo ssh nginx mkdir --parents /home/student/Desktop/Lab_Files/
-sudo scp /tmp/nginx.conf.UDS                                nginx:/home/student/Desktop/Lab_Files/
-sudo scp /tmp/uds.json                                      nginx:/home/student/Desktop/Lab_Files/
-sudo scp /tmp/user_defined_signature_policy.json            nginx:/home/student/Desktop/Lab_Files/
+sudo scp /tmp/uds.json                                      nginx:/etc/app_protect/conf/nap.d/
+sudo scp /tmp/user_sig_policy.json                          nginx:/etc/app_protect/conf/nap.d/
