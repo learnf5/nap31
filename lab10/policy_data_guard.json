@@ -1,7 +1,7 @@
 {
   "policy": {
     "name": { "name": "POLICY_TEMPLATE_NGINX_BASE" },
-    "applicationLanguage": utf-8",
+    "applicationLanguage": "utf-8",
     "enforcementMode": "blocking",
     "blocking-settings": {
       "violations": [
