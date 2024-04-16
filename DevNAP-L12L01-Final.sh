@@ -28,7 +28,7 @@ sudo scp /tmp/app-protect-security-updates.key              nginx:/home/student/
 sudo scp /tmp/nginx.WAF                                     nginx:/etc/nginx/
 sudo scp /tmp/nap.WAF                                       nginx:/etc/nginx/conf.d/
 
-curl --silent --remote-name-all --output-dir /tmp -H "Authorization: token $lic_token" https://raw.githubusercontent.com/learnf5/devnap/main/lab10/{nginx,nap}.DoS
+curl --silent --remote-name-all --output-dir /tmp -H "Authorization: token $lic_token" https://raw.githubusercontent.com/learnf5/devnap/main/lab11/{nginx,nap}.DoS
 sudo scp /tmp/nginx.DoS                                     nginx:/etc/nginx/
 sudo scp /tmp/nap.DoS                                       nginx:/etc/nginx/conf.d/
 
