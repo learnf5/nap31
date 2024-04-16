@@ -27,6 +27,11 @@ sudo scp /tmp/{,new-}signature-report.json                  nginx:/tmp/
 sudo scp /tmp/app-protect-security-updates.key              nginx:/home/student/
 sudo scp /tmp/nginx.WAF                                     nginx:/etc/nginx/
 sudo scp /tmp/nap.WAF                                       nginx:/etc/nginx/conf.d/
+
 curl --silent --remote-name-all --output-dir /tmp -H "Authorization: token $lic_token" https://raw.githubusercontent.com/learnf5/devnap/main/lab10/{nginx,nap}.DoS
 sudo scp /tmp/nginx.DoS                                     nginx:/etc/nginx/
 sudo scp /tmp/nap.DoS                                       nginx:/etc/nginx/conf.d/
+
+
+# ADDED for new v4.8 course labs
+sudo scp /tmp/nap_files/lab11/customStrict.json                           nginx:/home/student/Desktop/Lab_Files/customStrict.json
