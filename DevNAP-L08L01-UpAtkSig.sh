@@ -21,3 +21,7 @@ curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.
 sudo scp /tmp/policy_viol_filetype.json                     nginx:/etc/app_protect/conf/nap.d
 sudo scp /tmp/my-filetypes.txt                              nginx:/etc/app_protect/conf/
 sudo scp /tmp/local-policy.json                             nginx:/etc/app_protect/conf/nap.d/
+
+curl --silent --remote-name-all --output-dir /tmp -H "Authorization: token $lic_token" https://raw.githubusercontent.com/learnf5/eval-keys/tree/main/nginx/nginx{.crt,.key}
+sudo scp /tmp/nginx.crt                                     nginx:/etc/ssl/nginx/
+sudo scp /tmp/nginx.key                                     nginx:/etc/ssl/nginx/
