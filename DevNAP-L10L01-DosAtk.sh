@@ -19,16 +19,18 @@ curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.
 sudo scp /tmp/policy_{transparent,viol_{http,evasion}}.json nginx:/etc/app_protect/conf/nap.d
 curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/learnf5/devnap/main/lab08/policy_viol_filetype.json
 sudo scp /tmp/policy_viol_filetype.json                    nginx:/etc/app_protect/conf/nap.d
-curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/learnf5/devnap/main/lab08/{my-filetypes.txt,{local-policy,signature-report,new-signature-report}.json,app-protect-security-updates.key,{nginx,nap}.WAF}
+curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/learnf5/devnap/main/lab08/{my-filetypes.txt,{local-policy}.json,app-protect-security-updates.key}
 sudo scp /tmp/my-filetypes.txt                             nginx:/etc/app_protect/conf/
 sudo scp /tmp/local-policy.json                            nginx:/etc/app_protect/conf/nap.d/
-sudo scp /tmp/{,new-}signature-report.json                 nginx:/tmp/
 sudo scp /tmp/app-protect-security-updates.key             nginx:/home/student/
+
+curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/learnf5/devnap/main/lab10/{nginx,nap}.WAF
 sudo scp /tmp/nginx.WAF                                    nginx:/etc/nginx/
 sudo scp /tmp/nap.WAF                                      nginx:/etc/nginx/conf.d/
-sudo ssh nginx mkdir --parents /home/student/Desktop/Lab_Files/
-curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/learnf5/devnap/main/GoodTraffic.sh
-curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/learnf5/devnap/main/BadTraffic.sh
+
+#On student workstation/jump box
+curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/learnf5/devnap/lab10/GoodTraffic.sh
+curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/learnf5/devnap/lab10/BadTraffic.sh
 sudo mkdir --parents /home/student/Desktop/Lab_Files/
 sudo mv /tmp/GoodTraffic.sh                               /home/student/Desktop/Lab_Files/GoodTraffic.sh
 sudo mv /tmp/BadTraffic.sh                                /home/student/Desktop/Lab_Files/BadTraffic.sh
