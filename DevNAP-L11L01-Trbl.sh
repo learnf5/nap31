@@ -30,7 +30,3 @@ sudo scp /tmp/nap_files/lab10/nap.conf                                      ngin
 sudo scp /tmp/nap_files/lab10/policy_data_guard.json                        nginx:/etc/app_protect/conf/nap.d/
 sudo scp /tmp/nap_files/lab10/nginx.WAF                                     nginx:/etc/nginx/nginx.conf
 sudo scp /tmp/nap_files/lab10/nap.WAF                                       nginx:/etc/nginx/conf.d/nap.conf
-
-curl --silent --remote-name-all --output-dir /tmp -H "Authorization: token $lic_token" https://raw.githubusercontent.com/learnf5/eval-keys/tree/main/nginx/nginx{.crt,.key}
-sudo scp /tmp/nginx.crt                                                     nginx:/etc/ssl/nginx/nginx.crt
-sudo scp /tmp/nginx.key                                                    nginx:/etc/ssl/nginx/nginx.key
