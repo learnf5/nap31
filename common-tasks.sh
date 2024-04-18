@@ -30,7 +30,7 @@ set -x
 until sudo scp /tmp/nginx-repo.* nginx:/etc/ssl/nginx/ || (( count++ > 5 )); do sleep 5; done
 
 # run this lab's specific tasks saved on GitHub
-curl --silent --output /tmp/$LAB_ID.sh https://raw.githubusercontent.com/learnf5/nap-dev/main/$LAB_ID.sh
+curl --silent --output /tmp/$LAB_ID.sh https://raw.githubusercontent.com/learnf5/devnap/main/$LAB_ID.sh
 bash -x /tmp/$LAB_ID.sh
 
 # restart NGINX
