@@ -5,9 +5,14 @@ PS4='+$(date +"%T.%3N"): '
 # update lab environment
 sudo ssh nginx rm /etc/nginx/conf.d/default.conf
 sudo ssh nginx mkdir --parents /etc/app_protect/conf/nap.d
-curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/learnf5/devnap/main/lab10/{nginx,nap}.conf
-sudo scp /tmp/nginx.conf                                    nginx:/etc/nginx/
-sudo scp /tmp/nap.conf                                      nginx:/etc/nginx/conf.d/
+curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/learnf5/devnap/main/lab10/{nginx,nap}.WAF
+sudo scp /tmp/nginx.WAF                                    nginx:/etc/nginx/nginx.conf
+sudo scp /tmp/nap.WAF                                      nginx:/etc/nginx/conf.d/nap.conf
+
+curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/learnf5/devnap/main/lab11/{nginx,nap}.DoS
+sudo scp /tmp/nginx.DoS                                    nginx:/etc/nginx/
+sudo scp /tmp/nap.DoS                                      nginx:/etc/nginx/conf.d/
+
 curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/learnf5/devnap/main/lab02/{nginx,nap}.orig
 sudo scp /tmp/nginx.orig                                    nginx:/etc/nginx/
 sudo scp /tmp/nap.orig                                      nginx:/etc/nginx/conf.d/
