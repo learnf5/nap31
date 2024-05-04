@@ -30,3 +30,6 @@ sudo scp /tmp/nap_files/lab10/nap.conf                                      ngin
 sudo scp /tmp/nap_files/lab10/policy_data_guard.json                        nginx:/etc/app_protect/conf/nap.d/
 sudo scp /tmp/nap_files/lab10/nginx.WAF                                     nginx:/etc/nginx/nginx.conf
 sudo scp /tmp/nap_files/lab10/nap.WAF                                       nginx:/etc/nginx/conf.d/nap.conf
+
+curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/learnf5/devnap/main/lab01/hosts
+sudo scp /tmp/hosts nginx:/etc/hosts
