@@ -10,3 +10,6 @@ sudo scp /tmp/nap.conf   nginx:/etc/nginx/conf.d/
 curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/learnf5/devnap/main/lab02/{nginx,nap}.orig
 sudo scp /tmp/nginx.orig nginx:/etc/nginx/
 sudo scp /tmp/nap.orig   nginx:/etc/nginx/conf.d/
+
+curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/learnf5/devnap/main/lab01/hosts
+sudo scp /tmp/hosts nginx:/etc/hosts
