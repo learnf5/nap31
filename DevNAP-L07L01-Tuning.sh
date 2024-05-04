@@ -18,3 +18,6 @@ curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.
 sudo scp /tmp/my-default-policy.json nginx:/tmp/my-default-policy.json
 curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/learnf5/devnap/main/lab07/policy_{transparent,viol_{http,evasion,filetype}}.json
 sudo scp /tmp/policy_{transparent,viol_{http,evasion,filetype}}.json nginx:/etc/app_protect/conf/nap.d/
+
+curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/learnf5/devnap/main/lab01/hosts
+sudo scp /tmp/hosts nginx:/etc/hosts
