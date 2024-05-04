@@ -41,4 +41,4 @@ curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.
 sudo scp /tmp/hosts nginx:/etc/hosts
 
 # ADDED for new v4.8 course labs
-sudo scp /tmp/nap_files/lab11/customStrict.json                           nginx:/home/student/Desktop/Lab_Files/customStrict.json
+sudo scp /tmp/nap_files/lab12/customStrict.json                           nginx:/home/student/Desktop/Lab_Files/customStrict.json
