@@ -13,3 +13,6 @@ sudo scp /tmp/nginx.orig nginx:/etc/nginx/
 sudo scp /tmp/nap.orig   nginx:/etc/nginx/conf.d/
 curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/learnf5/devnap/main/lab06/simplify_requests.json
 sudo scp /tmp/simplify_requests.json nginx:/etc/app_protect/conf/nap.d/
+
+curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/learnf5/devnap/main/lab01/hosts
+sudo scp /tmp/hosts nginx:/etc/hosts
