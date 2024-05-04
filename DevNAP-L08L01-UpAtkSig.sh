@@ -21,3 +21,6 @@ curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.
 sudo scp /tmp/policy_viol_filetype.json                     nginx:/etc/app_protect/conf/nap.d
 sudo scp /tmp/my-filetypes.txt                              nginx:/etc/app_protect/conf/
 sudo scp /tmp/local-policy.json                             nginx:/etc/app_protect/conf/nap.d/
+
+curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/learnf5/devnap/main/lab01/hosts
+sudo scp /tmp/hosts nginx:/etc/hosts
