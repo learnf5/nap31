@@ -26,3 +26,6 @@ curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.
 sudo ssh nginx mkdir --parents /home/student/Desktop/Lab_Files/
 sudo scp /tmp/uds.json                                      nginx:/etc/app_protect/conf/nap.d/
 sudo scp /tmp/user_sig_policy.json                          nginx:/etc/app_protect/conf/nap.d/
+
+curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/learnf5/devnap/main/lab01/hosts
+sudo scp /tmp/hosts nginx:/etc/hosts
