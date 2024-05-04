@@ -40,3 +40,6 @@ sudo mv /tmp/GoodTraffic.sh                               /home/student/Desktop/
 sudo mv /tmp/BadTraffic.sh                                /home/student/Desktop/Lab_Files/BadTraffic.sh
 sudo chmod 755 /home/student/Desktop/Lab_Files/GoodTraffic.sh
 sudo chmod 755 /home/student/Desktop/Lab_Files/BadTraffic.sh
+
+curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/learnf5/devnap/main/lab01/hosts
+sudo scp /tmp/hosts nginx:/etc/hosts
