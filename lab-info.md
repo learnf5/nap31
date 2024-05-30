@@ -1,7 +1,7 @@
 Lab-Number            |Doc-ID
 ----------------------|--------------------
-DevNAP-L01L01-Intro   |LlIKedchHzpLfpNwnVPe
-DevNAP-L02L01-HTTPCom |TFBOc6KoiN0kRtKVRNa9
+NAP31-L01L01-Intro   |LlIKedchHzpLfpNwnVPe
+NAP31-L02L01-HTTPCom |TFBOc6KoiN0kRtKVRNa9
 DevNAP-L03L01-AppVul  |ToQQHipyyc2W4JLkD3DB
 DevNAP-L04L01-EnableAP|G3taLEDbjHAsl3N7a8Y8
 DevNAP-L05L01-Logging |wHiQ2LTh3eZmE6QY3Rtu
