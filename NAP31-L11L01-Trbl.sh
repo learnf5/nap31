@@ -4,7 +4,10 @@ PS4='+$(date +"%T.%3N"): '
 
 # update lab environment
 cd /tmp
-git clone https://github.com/learnf5/nap31.git nap_files
+
+# NOT sure we need the git clone - just download & copy via github directly
+#git clone https://github.com/learnf5/nap31.git nap_files
+
 sudo ssh nginx rm /etc/nginx/conf.d/default.conf
 sudo ssh nginx mkdir --parents /etc/app_protect/conf/nap.d
 sudo ssh nginx mkdir --parents /home/student/Desktop/Lab_Files
