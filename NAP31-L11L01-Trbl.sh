@@ -4,7 +4,7 @@ PS4='+$(date +"%T.%3N"): '
 
 # update lab environment
 cd /tmp
-git clone https://github.com/learnf5/devnap.git nap_files
+git clone https://github.com/learnf5/nap31.git nap_files
 sudo ssh nginx rm /etc/nginx/conf.d/default.conf
 sudo ssh nginx mkdir --parents /etc/app_protect/conf/nap.d
 sudo ssh nginx mkdir --parents /home/student/Desktop/Lab_Files
@@ -31,5 +31,5 @@ sudo scp /tmp/nap_files/lab10/policy_data_guard.json                        ngin
 sudo scp /tmp/nap_files/lab10/nginx.WAF                                     nginx:/etc/nginx/nginx.conf
 sudo scp /tmp/nap_files/lab10/nap.WAF                                       nginx:/etc/nginx/conf.d/nap.conf
 
-curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/learnf5/devnap/main/lab01/hosts
+curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/learnf5/nap31/main/lab01/hosts
 sudo scp /tmp/hosts nginx:/etc/hosts
