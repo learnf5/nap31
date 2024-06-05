@@ -8,6 +8,8 @@ cd /tmp
 # NOT sure we need the git clone - just download & copy via github directly
 #git clone https://github.com/learnf5/nap31.git nap_files
 
+# ADD the individual curl stmts to download the files from github otherwise won't be able to do scp commands below
+
 sudo ssh nginx rm /etc/nginx/conf.d/default.conf
 sudo ssh nginx mkdir --parents /etc/app_protect/conf/nap.d
 sudo ssh nginx mkdir --parents /home/student/Desktop/Lab_Files
