@@ -1,7 +1,7 @@
 Lab-Number            |Doc-ID
 ----------------------|--------------------
 NAP31-L01L01-INTRO    |LlIKedchHzpLfpNwnVPe
-NAP31-L02L01-HTTPCom  |TFBOc6KoiN0kRtKVRNa9
+NAP31-L02L01-HTTPCOM  |TFBOc6KoiN0kRtKVRNa9
 NAP31-L03L01-AppVul   |ToQQHipyyc2W4JLkD3DB
 NAP31-L04L01-EnableAP |G3taLEDbjHAsl3N7a8Y8
 NAP31-L05L01-Logging  |wHiQ2LTh3eZmE6QY3Rtu
