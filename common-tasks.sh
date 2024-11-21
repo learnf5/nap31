@@ -26,8 +26,8 @@ chmod +x /home/student/Desktop/Lab_Guide.desktop
 set +x
 curl --silent --remote-name-all --output-dir /tmp --header "Authorization: token $LIC_TOKEN" https://raw.githubusercontent.com/learnf5/eval-reg-keys/main/nginx/nginx-repo.{crt,key,jwt}
 echo curl --silent --remote-name-all --output-dir /tmp --header "Authorization: token xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" https://raw.githubusercontent.com/learnf5/eval-reg-keys/main/nginx/nginx-repo.{crt,key,jwt}
-#curl --silent --remote-name-all --output-dir /tmp --header "Authorization: token $LIC_TOKEN" https://raw.githubusercontent.com/learnf5/eval-reg-keys/main/nginx/nginx-one-A-S0004439.{crt,key,jwt}
-#echo curl --silent --remote-name-all --output-dir /tmp --header "Authorization: token xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" https://raw.githubusercontent.com/learnf5/eval-reg-keys/main/nginx/nginx-one-A-S0004439.{crt,key,jwt}
+curl --silent --remote-name-all --output-dir /tmp --header "Authorization: token $LIC_TOKEN" https://raw.githubusercontent.com/learnf5/eval-reg-keys/main/nginx/nginx-one-A-S0004439.{crt,key,jwt}
+echo curl --silent --remote-name-all --output-dir /tmp --header "Authorization: token xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" https://raw.githubusercontent.com/learnf5/eval-reg-keys/main/nginx/nginx-one-A-S0004439.{crt,key,jwt}
 set -x
 until sudo scp /tmp/nginx-repo.* nginx:/etc/ssl/nginx/ || (( count++ > 5 )); do sleep 5; done
 #until sudo scp /tmp/nginx-one-A-S0004439.* nginx:/etc/ssl/nginx/ || (( count++ > 5 )); do sleep 5; done
