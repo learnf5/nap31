@@ -31,8 +31,8 @@ echo curl --silent --remote-name-all --output-dir /tmp --header "Authorization: 
 curl --silent --remote-name-all --output-dir /tmp --header "Authorization: token $LIC_TOKEN" https://raw.githubusercontent.com/learnf5/eval-reg-keys/main/nginx/new_license.jwt
 echo curl --silent --remote-name-all --output-dir /tmp --header "Authorization: token xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" https://raw.githubusercontent.com/learnf5/eval-reg-keys/main/nginx/new_license.jwt
 set -x
-set -x
 until sudo scp /tmp/nginx-repo.* nginx:/etc/ssl/nginx/ || (( count++ > 5 )); do sleep 5; done
+until sudo scp /tmp/new_license.jwt nginx:/etc/nginx/license.jwt || (( count++ > 5 )); do sleep 5; done
 #until sudo scp /tmp/nginx-one-A-S0004439.* nginx:/etc/ssl/nginx/ || (( count++ > 5 )); do sleep 5; done
 
 # run this lab's specific tasks saved on GitHub
