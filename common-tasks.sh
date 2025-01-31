@@ -24,8 +24,8 @@ chmod +x /home/student/Desktop/Lab_Guide.desktop
 
 # install nginx license
 set +x
-curl --silent --remote-name-all --output-dir /tmp --header "Authorization: token $LIC_TOKEN" https://raw.githubusercontent.com/learnf5/eval-reg-keys/main/nginx/nginx-repo.{crt,key,jwt}
-echo curl --silent --remote-name-all --output-dir /tmp --header "Authorization: token xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" https://raw.githubusercontent.com/learnf5/eval-reg-keys/main/nginx/nginx-repo.{crt,key,jwt}
+curl --silent --remote-name-all --output-dir /tmp --header "Authorization: token $LIC_TOKEN" https://raw.githubusercontent.com/learnf5/eval-reg-keys/main/nginx/EXPIRES-March-2-2025/nginx-repo.{crt,key,jwt}
+echo curl --silent --remote-name-all --output-dir /tmp --header "Authorization: token xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" https://raw.githubusercontent.com/learnf5/eval-reg-keys/main/nginx/EXPIRES-March-2-2025/nginx-repo.{crt,key,jwt}
 set -x
 until sudo scp /tmp/nginx-repo.{crt,key} nginx:/etc/ssl/nginx/ || (( count++ > 5 )); do sleep 5; done
 until sudo scp /tmp/nginx-repo.jwt nginx:/etc/nginx/license.jwt || (( count++ > 5 )); do sleep 5; done
