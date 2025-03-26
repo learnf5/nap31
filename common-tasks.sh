@@ -23,22 +23,10 @@ gio set /home/student/Desktop/Lab_Guide.desktop metadata::trusted true
 chmod +x /home/student/Desktop/Lab_Guide.desktop
 
 # install nginx license
-set +x
-# workaround for updating NAP DoS & getting R33 to start running
-# Get 30 day trial NGINX Plus license from Salesforce for nginx-repo.crt & .key files
-# Get 30 day trial NGINX ONE license from Salesforce for license.jwt file
-#curl --silent --remote-name-all --output-dir /tmp --header "Authorization: token $LIC_TOKEN" https://raw.githubusercontent.com/learnf5/eval-reg-keys/main/nginx/EXPIRES-March-26-2025/nginx-one-eval.jwt
-#curl --silent --remote-name-all --output-dir /tmp --header "Authorization: token $LIC_TOKEN" https://raw.githubusercontent.com/learnf5/eval-reg-keys/main/nginx/EXPIRES-March-26-2025/nginx-repo.{crt,key}
-#echo curl --silent --remote-name-all --output-dir /tmp --header "Authorization: token xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" https://raw.githubusercontent.com/learnf5/eval-reg-keys/main/nginx/EXPIRES-March-26-2025/nginx-one-eval.jwt
-#echo curl --silent --remote-name-all --output-dir /tmp --header "Authorization: token xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" https://raw.githubusercontent.com/learnf5/eval-reg-keys/main/nginx/EXPIRES-March-26-2025/nginx-repo.{crt,key}
-#set -x
-#until sudo scp /tmp/nginx-repo.crt nginx:/etc/ssl/nginx/nginx-repo.crt || (( count++ > 5 )); do sleep 5; done
-#until sudo scp /tmp/nginx-repo.key nginx:/etc/ssl/nginx/nginx-repo.key || (( count++ > 5 )); do sleep 5; done
-#until sudo scp /tmp/nginx-one-eval.jwt nginx:/etc/nginx/license.jwt || (( count++ > 5 )); do sleep 5; done
-
 # ALL licenses from NGINX One (Updated to include NAP DoS repo permission)
-curl --silent --remote-name-all --output-dir /tmp --header "Authorization: token $LIC_TOKEN" https://raw.githubusercontent.com/learnf5/eval-reg-keys/main/nginx/EXPIRES-April-4-2025/nginx-one-eval.{crt,key,jwt}
-echo curl --silent --remote-name-all --output-dir /tmp --header "Authorization: token xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" https://raw.githubusercontent.com/learnf5/eval-reg-keys/main/nginx/EXPIRES-April-4-2025/nginx-one-eval.{crt,key,jwt}
+set +x
+curl --silent --remote-name-all --output-dir /tmp --header "Authorization: token $LIC_TOKEN" https://raw.githubusercontent.com/learnf5/eval-reg-keys/main/nginx/EXPIRES-April-25-2025/nginx-one-eval.{crt,key,jwt}
+echo curl --silent --remote-name-all --output-dir /tmp --header "Authorization: token xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" https://raw.githubusercontent.com/learnf5/eval-reg-keys/main/nginx/EXPIRES-April-25-2025/nginx-one-eval.{crt,key,jwt}
 set -x
 until sudo scp /tmp/nginx-one-eval.crt nginx:/etc/ssl/nginx/nginx-repo.crt || (( count++ > 5 )); do sleep 5; done
 until sudo scp /tmp/nginx-one-eval.key nginx:/etc/ssl/nginx/nginx-repo.key || (( count++ > 5 )); do sleep 5; done
